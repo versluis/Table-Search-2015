@@ -9,7 +9,7 @@
 #import "MainTableViewController.h"
 #import "SearchResultsViewController.h"
 
-@interface MainTableViewController () <UISearchResultsUpdating>
+@interface MainTableViewController () <UISearchResultsUpdating, UISearchControllerDelegate>
 @property (strong, nonatomic) NSMutableArray *data;
 @property (strong, nonatomic) UISearchController *controller;
 @property (strong, nonatomic) NSArray *results;
@@ -38,7 +38,7 @@
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
         formatter.numberStyle = NSNumberFormatterSpellOutStyle;
         
-        for (int i = 0; i < 3000; i++) {
+        for (int i = 0; i < 30; i++) {
             NSNumber *thisNumber = [NSNumber numberWithInt:i];
             NSString *spelledOutNumber = [formatter stringFromNumber:thisNumber];
             [_data addObject:spelledOutNumber];
@@ -58,6 +58,9 @@
         // create search controller
         _controller = [[UISearchController alloc]initWithSearchResultsController:resultsController];
         _controller.searchResultsUpdater = self;
+        
+        // optional: set the search controller delegate
+        _controller.delegate = self;
         
     }
     return _controller;
@@ -89,16 +92,15 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-# pragma - Search Results Updater
+# pragma mark - Search Results Updater
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     
     // filter the search results
-    // self.results = nil;
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains [cd] %@", self.controller.searchBar.text];
     self.results = [self.data filteredArrayUsingPredicate:predicate];
     
-    NSLog(@"Search Results are: %@", [self.results description]);
+    // NSLog(@"Search Results are: %@", [self.results description]);
 }
 
 - (IBAction)searchButtonPressed:(id)sender {
@@ -108,6 +110,34 @@
 
 }
 
+
+# pragma mark - Search Controller Delegate (optional)
+
+- (void)didDismissSearchController:(UISearchController *)searchController {
+    
+    // called when the search controller has been dismissed
+}
+
+- (void)didPresentSearchController:(UISearchController *)searchController {
+    
+    // called when the serach controller has been presented
+}
+
+- (void)presentSearchController:(UISearchController *)searchController {
+    
+    // if you want to implement your own presentation for how the search controller is shown,
+    // you can do that here
+}
+
+- (void)willDismissSearchController:(UISearchController *)searchController {
+    
+    // called just before the search controller is dismissed
+}
+
+- (void)willPresentSearchController:(UISearchController *)searchController {
+    
+    // called just before the search controller is presented
+}
 
 
 
