@@ -42,7 +42,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Main Table View" id="NXM-yt-wvU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="QJM-Qi-cfU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="QJM-Qi-cfU">
+                            <connections>
+                                <action selector="searchButtonPressed:" destination="GP5-U2-qZY" id="nqa-eT-Moi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WoP-Oh-DlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -59,7 +63,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="iH0-WA-tRj" style="IBUITableViewCellStyleDefault" id="W5c-Oh-adW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="iH0-WA-tRj" style="IBUITableViewCellStyleDefault" id="W5c-Oh-adW">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W5c-Oh-adW" id="CSs-KI-Sau">
