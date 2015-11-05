@@ -10,4 +10,5 @@ I've built this code 4-part screencast:
 
 The whole course is about 50 minutes long, and I'll explain details step by step. Part 1 is free, and the remainder of the course is available to members of my iOS Dev Diary website. All code is Objective-C, and the code is available as a demo project on GitHub.
 
-Sounds interesting? Watch the full version here: http://pinkstone.co.uk/screencast-building-a-searchable-uitableview-in-ios-9/
+Sounds interesting? Watch the full version here: 
+http://pinkstone.co.uk/screencast-building-a-searchable-uitableview-in-ios-9/
