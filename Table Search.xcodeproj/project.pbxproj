@@ -16,6 +16,7 @@
 		D2728EF51BE8EAF400AC000A /* Table_SearchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2728EF41BE8EAF400AC000A /* Table_SearchUITests.m */; };
 		D2728F041BE8EC8700AC000A /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2728F031BE8EC8700AC000A /* MainTableViewController.m */; };
 		D2728F071BE8EC9D00AC000A /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2728F061BE8EC9D00AC000A /* SearchResultsViewController.m */; };
+		D2FA9FF61EC4A562007240BD /* ShowResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FA9FF51EC4A562007240BD /* ShowResultsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		D2728F031BE8EC8700AC000A /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		D2728F051BE8EC9D00AC000A /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
 		D2728F061BE8EC9D00AC000A /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
+		D2FA9FF41EC4A562007240BD /* ShowResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowResultsViewController.h; sourceTree = "<group>"; };
+		D2FA9FF51EC4A562007240BD /* ShowResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowResultsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				D2728F031BE8EC8700AC000A /* MainTableViewController.m */,
 				D2728F051BE8EC9D00AC000A /* SearchResultsViewController.h */,
 				D2728F061BE8EC9D00AC000A /* SearchResultsViewController.m */,
+				D2FA9FF41EC4A562007240BD /* ShowResultsViewController.h */,
+				D2FA9FF51EC4A562007240BD /* ShowResultsViewController.m */,
 				D2728EDB1BE8EAF400AC000A /* Assets.xcassets */,
 				D2728EDD1BE8EAF400AC000A /* LaunchScreen.storyboard */,
 				D2728EE01BE8EAF400AC000A /* Info.plist */,
@@ -275,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FA9FF61EC4A562007240BD /* ShowResultsViewController.m in Sources */,
 				D2728ED41BE8EAF400AC000A /* AppDelegate.m in Sources */,
 				D2728ED11BE8EAF400AC000A /* main.m in Sources */,
 				D2728F041BE8EC8700AC000A /* MainTableViewController.m in Sources */,
@@ -504,6 +510,7 @@
 				D2728EFB1BE8EAF400AC000A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2728EFC1BE8EAF400AC000A /* Build configuration list for PBXNativeTarget "Table SearchTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +519,7 @@
 				D2728EFE1BE8EAF400AC000A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2728EFF1BE8EAF400AC000A /* Build configuration list for PBXNativeTarget "Table SearchUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +528,7 @@
 				D2728F011BE8EAF400AC000A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

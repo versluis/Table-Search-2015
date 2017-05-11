@@ -8,6 +8,7 @@
 
 #import "MainTableViewController.h"
 #import "SearchResultsViewController.h"
+#import "ShowResultsViewController.h"
 
 @interface MainTableViewController () <UISearchResultsUpdating, UISearchControllerDelegate>
 @property (strong, nonatomic) NSMutableArray *data;
@@ -88,7 +89,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
+    // deselect row
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
